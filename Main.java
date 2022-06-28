@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
    
     //methods:
@@ -5,17 +7,42 @@ public class Main {
         return min *60;
     }
 
-    //overloaded
+    /**
+     * @overload #minTOsec
+     * @param min
+     * @param sec
+     * @return sec
+     */
     public int minTOsec(int min, int sec) {
 
         return (min*60 + sec);
     }
 
+    /**
+     * 
+     * @param min
+     * @param sec
+     * @return Time as String
+     */
+    public String getDurationString(int min, int sec){
+        
+        if (0 > min || 0 > sec || sec > 60) {
+            return "Invalid input\nMinutes and Secondes have to be greater than 0 and seconds has to be less than 60";    
+        }
+        
+        String time = "";
+        
+        time += (min / 60) + "h::" +(min % 60) + "m::" + sec + "s";
+
+        return time;
+    }
+
+    
+
     public static void main(String[] args) {
 
         Main main = new Main();
-        System.out.println(main.minTOsec(60));
-        System.out.println(main.minTOsec(60, 30));
+        System.out.println(main.getDurationString(75, 30));
         
     }
 }
