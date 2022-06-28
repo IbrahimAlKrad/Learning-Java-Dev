@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
    
     //methods:
@@ -37,12 +35,28 @@ public class Main {
         return time;
     }
 
-    
+    /**
+     * @overload getDurationString
+     * @param sec
+     * @return time as String
+     */
+    public String getDurationString(int sec) {
+
+        if(0 > sec)
+            return "invalid value";
+
+        return 60 > sec ? getDurationString(0,sec):getDurationString(sec/60, sec % 60); 
+
+    }
 
     public static void main(String[] args) {
 
         Main main = new Main();
         System.out.println(main.getDurationString(75, 30));
         
+        System.out.println(main.getDurationString(30));
+        System.out.println(main.getDurationString(180));
+        System.out.println(main.getDurationString(2120));
+        System.out.println(main.getDurationString(-30));
     }
 }
