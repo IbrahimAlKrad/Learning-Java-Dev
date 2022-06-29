@@ -49,6 +49,14 @@ public class Main {
 
     }
 
+    public double area(int radius) {
+     
+        return (radius < 0) ? -1:(Math.PI * Math.pow(radius, 2));
+    }
+
+    public double area(int length, int width) {
+        return (length < 0 || width < 0) ? -1:(length*width);
+    }
 
     public static void main(String[] args) {
 
@@ -59,5 +67,11 @@ public class Main {
         System.out.println(main.getDurationString(180));
         System.out.println(main.getDurationString(2120));
         System.out.println(main.getDurationString(-30));
+
+        System.out.println(main.area(5));
+        System.out.println(main.area(-5));
+
+        System.out.println(main.area(4, 5));
+        System.out.println(main.area(4, -5));
     }
 }
