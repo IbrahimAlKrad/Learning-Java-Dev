@@ -58,20 +58,26 @@ public class Main {
         return (length < 0 || width < 0) ? -1:(length*width);
     }
 
+    public static void printYearsAndDays(long min){
+
+        if (min < 0) {
+        
+            System.out.println("Invalid Input");
+        
+        } else {
+
+            long days =  (min / 1440) % 365;
+            long years = min / (365 * 1440);
+            System.out.println( min + " min = "+ years+" y and " +days +" d" );
+
+        }
+
+    }
+
     public static void main(String[] args) {
 
         Main main = new Main();
-        System.out.println(main.getDurationString(75, 30));
+        printYearsAndDays(525600);
         
-        System.out.println(main.getDurationString(30));
-        System.out.println(main.getDurationString(180));
-        System.out.println(main.getDurationString(2120));
-        System.out.println(main.getDurationString(-30));
-
-        System.out.println(main.area(5));
-        System.out.println(main.area(-5));
-
-        System.out.println(main.area(4, 5));
-        System.out.println(main.area(4, -5));
     }
 }
