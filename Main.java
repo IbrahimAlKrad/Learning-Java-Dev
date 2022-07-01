@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main {
    
     //methods:
@@ -74,10 +77,22 @@ public class Main {
 
     }
 
+    public static boolean isCatPlaying(boolean summer, int temp){ 
+
+        if(summer){
+            if (25 <= temp & temp <= 45)
+                return true;
+        } else if (25 <= temp & temp <= 35)
+            return true;
+
+        return false;
+    }
     public static void main(String[] args) {
 
         Main main = new Main();
         printYearsAndDays(525600);
-        
+        System.out.println(isCatPlaying(true, 10));
+        System.out.println(isCatPlaying(false, 36));
+        System.out.println(isCatPlaying(false, 35));
     }
 }
