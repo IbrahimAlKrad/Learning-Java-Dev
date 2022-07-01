@@ -82,7 +82,19 @@ public class Main {
         if(summer){
             if (25 <= temp & temp <= 45)
                 return true;
-        } else if (25 <= temp & temp <= 35)
+        }
+        if (25 <= temp & temp <= 35)
+            return true;
+
+        return false;
+    }
+
+    public static boolean isLeapYear(int year){
+        
+        if (1 < year || year < 999)
+            return false;
+
+        if ((year % 4 == 0 & year % 100 != 0) || year % 400 != 0)
             return true;
 
         return false;
