@@ -2,7 +2,29 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-   
+    
+    private double firstNumber;
+    private double secNumber;
+
+    public double getFirstNumber() {
+        return firstNumber;
+    }
+    public double getSecNumber() {
+        return secNumber;
+    }
+
+    public void setFirstNumber(double newFirst) {
+        this.firstNumber = newFirst;
+    }
+    public void setSecNumber(double newSec) {
+        this.secNumber = newSec;
+    }
+
+    public double getAdditionResult() {
+        return this.firstNumber + this.secNumber;
+    }
+
+
     //methods:
     public int minTOsec(int min) {
         return min *60;
@@ -106,5 +128,11 @@ public class Main {
         System.out.println(isCatPlaying(true, 10));
         System.out.println(isCatPlaying(false, 36));
         System.out.println(isCatPlaying(false, 35));
+
+        main.setFirstNumber(5);
+        main.setSecNumber(4);
+
+        double result = main.getAdditionResult();
+        System.out.println(result);
     }
 }
