@@ -133,6 +133,6 @@ public class Main {
         main.setSecNumber(4);
 
         double result = main.getAdditionResult();
-        System.out.println(result);
+        System.out.println("add = " + result);
     }
 }
