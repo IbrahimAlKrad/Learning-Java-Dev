@@ -1,5 +1,3 @@
-package Inheritance;
-
 public class Circle {
     
     private double radius;
