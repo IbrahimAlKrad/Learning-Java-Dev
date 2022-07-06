@@ -24,8 +24,8 @@ public class Lamp {
         return battery;
     }
 
-    public int getGlobalRating() {
-        return getGlobalRating;
+    public int getGlobRating() {
+        return globRating;
     }
 
     public static void main(String[] args) {

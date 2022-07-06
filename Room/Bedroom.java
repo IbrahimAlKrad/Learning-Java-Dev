@@ -23,8 +23,8 @@ public class Bedroom {
     }
 
     //Methods
-    public Bed getBed() {
-        return bed;
+    public Lamp getLamp() {
+        return lamp;
     }
 
     public void makeBed() {

@@ -11,8 +11,8 @@ public class Bed {
     public Bed(String style, int pillow, int height, int sheets, int quilt) {
         this.style = style;
         this.height = height;
-        this.pillows = pillow;
-        this.sheets = sheet;
+        this.pillows = pillow;  
+        this.sheets = sheets;
         this.quilt = quilt;
     }    
 
@@ -37,4 +37,7 @@ public class Bed {
         return quilt;
     }
 
+    public void make() {
+        System.out.println("The bed is being made!");
+    }
 }
