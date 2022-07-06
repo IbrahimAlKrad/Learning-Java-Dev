@@ -28,7 +28,4 @@ public class Lamp {
         return globRating;
     }
 
-    public static void main(String[] args) {
-        
-    }
 }

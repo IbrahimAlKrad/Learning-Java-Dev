@@ -29,7 +29,7 @@ public class Bedroom {
 
     public void makeBed() {
         System.out.println("The bed is being made!");
-        make();
+        bed.make();
     }
 
 }
