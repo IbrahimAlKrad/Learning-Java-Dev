@@ -25,7 +25,7 @@ public class Lamp {
     }
 
     public int getGlobalRating() {
-        return getGlobalRating
+        return getGlobalRating;
     }
 
     public static void main(String[] args) {
