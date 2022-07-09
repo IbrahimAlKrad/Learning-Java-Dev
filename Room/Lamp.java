@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+
 public class Lamp {
 
     //Attributes
@@ -28,4 +31,35 @@ public class Lamp {
         return globRating;
     }
 
+    public boolean isBattery() {
+        return battery;
+    }
+
+    public void fun() {
+        
+        int[] arr = {1, 2, 3, 2, 5, 1};
+
+        HashSet<Integer> hs = new HashSet<Integer>();
+
+        for (int i : arr) {
+            /**if (hs.contains(i)) {
+                hs.remove(i);
+            } else {
+                hs.add(i);
+            }*/
+            if (hs.contains(i) ? hs.remove(i) : hs.add(i));
+        }
+        int[] result = hs.stream()
+                            .mapToInt(Integer::intValue)
+                            .toArray();
+
+        for (int i : result) {
+            System.out.println(i + "\n");
+        }
+    }
+
+    public static void main(String[] args) {
+        Lamp lamp = new Lamp("style", true, 3);
+        lamp.fun();
+    }
 }
