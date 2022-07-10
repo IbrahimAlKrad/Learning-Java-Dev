@@ -1,0 +1,13 @@
+@startuml
+
+card BillsBurgers
+card APPLICATION
+actor Bill 
+Bill -> APPLICATION : Type of Burger
+Bill -> APPLICATION : additional items
+
+card Burger
+Burger -> Burger : base Hamburger
+Burger -> Burger : 2 other burgers 
+
+@enduml
