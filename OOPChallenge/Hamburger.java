@@ -6,7 +6,7 @@ public class Hamburger {
     private double price;
     private String breadRollType;
      
-    private String addition1Name;
+    private String addHamburgerAddition;
     private double addition1Price;
 
     private String addition2Name;
@@ -28,32 +28,32 @@ public class Hamburger {
     }
 
     //Methods
-    public void addition1Name(String name, double price) {
-        this.addition1Name = name;
+    public void addHamburgerAddition1(String name, double price) {
+        this.addHamburgerAddition = name;
         this.addition1Price = price;
         System.out.println("Added " + name + " for an extra " + price);
     }
 
-    public void addition2Name(String name, double price) {
+    public void addHamburgerAddition2(String name, double price) {
         this.addition2Name = name;
         this.addition2Price = price;
         System.out.println("Added " + name + " for an extra " + price);
     }
     
-    public void addition3Name(String name, double price) {
+    public void addHamburgerAddition3(String name, double price) {
         this.addition3Name = name;
         this.addition3Price = price;
         System.out.println("Added " + name + " for an extra " + price);
     }
     
-    public void addition4Name(String name, double price) {
+    public void addHamburgerAddition4(String name, double price) {
         this.addition4Name = name;
         this.addition4Price = price;
         System.out.println("Added " + name + " for an extra " + price);
     }
 
     public double itemizehamburger() {
-        return price + addition1Price + addition2Price + addition3Price + addition4Price;
+        return this.price + this.addition1Price + this.addition2Price + this.addition3Price + this.addition4Price;
     }
 
 }

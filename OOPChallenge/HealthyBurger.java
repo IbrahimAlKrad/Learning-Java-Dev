@@ -10,4 +10,18 @@ public class HealthyBurger extends Hamburger {
     public HealthyBurger (String meat, double price) {
         super("Healthy", meat, price, "Brown rye");
     }
+
+    //methods
+    public void addHealthyAddition1(String name, double price) { 
+        this.healthyExtra1Name = name;
+        this.healthyExtra1Price = price;
+    }
+    public void addHealthyAddition2(String name, double price) { 
+        this.healthyExtra2Name = name;
+        this.healthyExtra2Price = price;
+    }
+
+    public double itemizeHamburger() {
+        return super.itemizehamburger();
+    }
 }
